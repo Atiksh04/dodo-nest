@@ -13,7 +13,6 @@ type User = {
 
 // settings component
 const Settings: React.FC = () => {
-    const [userData, setUserData] = useState<User | null>(null);
     const [formData, setFormData] = useState<User | null>(null);
     const [errors, setErrors] = useState<{ [key: string]: string }>({});
     const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
@@ -23,7 +22,6 @@ const Settings: React.FC = () => {
         const fetchData = async () => {
             try {
                 const data = await fetchUserData(1); 
-                setUserData(data);
                 setFormData(data); 
             } catch (error) {
                 console.error("Error fetching data:", error);
