@@ -90,7 +90,7 @@ const Notifications: React.FC<{
     <div
       className={`${
         isMobile
-          ? "w-full absolute z-50 h-full bg-[#F5F7F7] p-8"
+          ? "w-full absolute z-50 h-[100vh] bg-[#F5F7F7] p-8"
           : "h-full w-[20rem] border-l p-8"
       }`}
     >

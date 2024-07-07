@@ -93,7 +93,7 @@ const TransactionList: React.FC = () => {
                 ))}
             </div>
 
-            <div className="mt-4 flex justify-between">
+            <div className="mt-4 mb-24 flex justify-between">
                 <button
                     onClick={handlePageChange}
                     data-page={currentPage - 1}

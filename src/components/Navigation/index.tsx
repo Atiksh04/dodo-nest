@@ -9,7 +9,7 @@ import PaymentLogo from "./images/payment-logo.svg";
 import CloseIcon from "./images/close.svg";
 
 // rendering components for individual navigation route
-const NavigationRoute: React.FC<{ route: ROUTE_TYPE }> = ({ route }) => {
+const NavigationRoute: React.FC<{ route: ROUTE_TYPE,  toggleNavigation: (value: boolean) => void }> = ({ route, toggleNavigation }) => {
   const [showDropdown, setShowDropdown] = useState<boolean>(false);
 
   const location = useLocation();
@@ -21,6 +21,7 @@ const NavigationRoute: React.FC<{ route: ROUTE_TYPE }> = ({ route }) => {
     if (route.hasDropdown) setShowDropdown(() => !showDropdown);
     else if (route.routePath && route.isNavigationAllowed) {
       navigate(route.routePath);
+      toggleNavigation(false);
     }
   };
 
@@ -108,7 +109,7 @@ const NavigationList: React.FC<{
           <div className="text-[#1C1C1C66] ml-4">Pages</div>
           {NAVIGATION_ROUTES.map((route, index) => (
             <div className="w-full" key={index}>
-              <NavigationRoute route={route} />
+              <NavigationRoute route={route} toggleNavigation={toggleNavigation}/>
             </div>
           ))}
         </div>
@@ -154,7 +155,7 @@ const Navigation: React.FC<{
       <>
         {isMobile ? (
           isShowNavigation ? (
-            <div className="w-full absolute z-50 h-full bg-[#F5F7F7]">
+            <div className="w-full absolute z-50 h-[100vh] bg-[#F5F7F7]">
               <NavigationList
                 isMobile={isMobile}
                 toggleNavigation={toggleNavigation}
