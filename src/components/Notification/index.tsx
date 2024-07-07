@@ -84,7 +84,7 @@ const Notifications: React.FC<{
       root.style.removeProperty("--reduceOverview");
       root.style.removeProperty("--reduceStats");
     };
-  }, []);
+  }, [isMobile]);
 
   return (
     <div
