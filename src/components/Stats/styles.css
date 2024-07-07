@@ -1,0 +1,28 @@
+@media (max-width: 990px) {
+    .statsContainer {
+       width: calc(15rem - var(--reduceStats)) !important;
+    }
+}
+
+@media (max-width: 936px) {
+    .statsWrapper {
+        flex-direction: column !important;
+    }
+    .statsContainer {
+        width: 100% !important;
+        margin: 1rem 0;
+    }
+    .reportsTabMap {
+        width: 100% !important;
+    }
+}
+
+
+
+.statsWrapper{
+    flex-direction: row;
+}
+
+.statsContainer {
+    width: calc(17.85rem - var(--reduceStats));
+}

@@ -1,0 +1,9 @@
+@media (max-width: 700px) {
+    .layoutElements {
+      width: 100% !important;
+    }
+  }
+
+.layoutElements{
+    transition: width 0.3s ease-in-out;
+}

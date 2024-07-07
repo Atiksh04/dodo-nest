@@ -1,0 +1,71 @@
+/* Base styles for .graph */
+.graph {
+    height: 27rem;
+    width: calc(37.28rem - var(--reduceOverview));
+}
+
+/* Media Queries */
+@media (max-width: 1310px) {
+    .graph {
+        width: calc(32.28rem - var(--reduceOverview)) !important;
+    }
+}
+
+@media (max-width: 990px) {
+    .graph {
+        width: calc(28rem - var(--reduceOverview)) !important;
+    }
+}
+
+@media (max-width: 936px) {
+    .reportContainer {
+        flex-direction: column;
+    }
+    .graph {
+        width: calc(46rem - var(--reduceOverview)) !important;
+        height: 32rem;
+    }
+}
+
+@media (max-width: 580px) {
+    .reportContainer {
+        flex-direction: column;
+    }
+    .graph {
+        width: calc(41rem - var(--reduceOverview)) !important;
+        height: 30rem;
+    }
+    .chartLabel {
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .reportContainer {
+        flex-direction: column;
+    }
+    .graph {
+        width: calc(35rem - var(--reduceOverview)) !important;
+        height: 26rem;
+    }
+}
+
+@media (max-width: 430px) {
+    .reportContainer {
+        flex-direction: column;
+    }
+    .graph {
+        width: calc(32rem - var(--reduceOverview)) !important;
+        height: 24rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .reportContainer {
+        flex-direction: column;
+    }
+    .graph {
+        width: calc(29rem - var(--reduceOverview)) !important;
+        height: 22rem;
+    }
+}
